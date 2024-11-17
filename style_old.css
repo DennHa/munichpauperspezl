@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Besley:ital,wght@0,400..900;1,400..900&display=swap');
+
+:root {
+    --bgColor: #fff;
+    --bgColor2: #fff;
+    --accentColor: #003d83;
+    --accentColor2: #003d834b;
+    --font: "Besley", serif;
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 98vh;
+    font-family: var(--font);
+    background-color: #fff;
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(85,207,255,1) 100%);
+    overflow-x: hidden; /* Disable horizontal scrolling by default */
+    overflow-y: auto; /* Enable vertical scrolling by default */
+}
+
+@media (min-width: 768px) { /* Apply styles for viewports wider than 768px (desktop view) */
+    body {
+        overflow-y: hidden; /* Disable vertical scrolling on desktop */
+    }
+}
+.background-container {
+    position: relative;
+}
+
+.background-svg {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%; /* Adjust width and height to create parallax effect */
+    height: auto;
+    z-index: 1;
+    opacity: 0.8; /* Adjust opacity if needed */
+
+}
+
+
+
+#header{
+    position: relative;
+    margin-top: 2vh;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-bottom: 2vh;
+    padding: 0;
+    background-image: url('img/kindl.svg');
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position: center;
+    height: 40vh;
+    min-height: 200px;
+    z-index: 20;
+}
+
+#headline {
+    color: var(--accentColor);
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1.25;
+    display: block;
+    font-family: var(--font);
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    z-index: 26;
+}
+
+#subHeadline{
+    color: var(--accentColor);
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1.25;
+    display: block;
+    font-family: var(--font);
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    z-index: 26;
+}
+
+#links {
+    position: relative;
+    z-index: 3;
+    max-width: 675px;
+    width: 100%; /* Adjust to fill the container */
+    margin: 27px auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.link {
+    background-color: transparent;
+    color: var(--accentColor);
+    border: solid var(--accentColor) 2px;
+    font-weight: bold;
+    border-radius: 10px;
+    font-size: 1rem;
+    text-align: center;
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    text-decoration: none;
+    transition: all .25s cubic-bezier(.08, .59, .29, .99);
+}
+
+/* Remove hover effect for touch devices */
+@media (hover: hover) {
+    .link:hover {
+        background-color: var(--accentColor);
+        color: var(--bgColor);
+    }
+}
+
+.link:active {
+    background-color: var(--accentColor);
+    color: var(--bgColor);
+}
+
+/* Ensure links are clickable */
+.link:focus {
+    outline: none;
+}
+
+footer {
+    background-color: #fff;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: var(--accentColor);
+    text-align: center;
+    padding-bottom: 10px;
+    font-size: 0.8rem;
+    z-index: 300; /* Ensure it's above other elements */
+}
+
+.impressum {
+    color: var(--accentColor);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.impressum:hover {
+    color: var(--accentColor);
+}
+
+#impressumPage{
+    margin-left: 2vw;
+    max-width: 70vw;
+}
+
+.hands-bg {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 15vh; /* Höhe auf 10vh beschränken */
+    min-height: 5vh;
+    background-image: url('img/hands.svg'); /* Pfad zu deinem Bild */
+    background-repeat: repeat-x; /* Wiederholen auf der x-Achse */
+    background-position: calc(100% - 100px) bottom; /* Adjust offset by -20px */
+    background-size: auto 100%; /* Automatische Breite, Höhe 100% */
+    z-index: -1; /* In den Hintergrund senden */
+} 
+
+#sponsors {
+    color: var(--accentColor2);
+    padding: 20px 0;
+    text-align: center;
+}
+
+#sponsors h2 {
+    color: var(--accentColor);
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.sponsor-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 80px;
+}
+
+.sponsor-logo {
+    max-width: 180px;
+    height: auto;
+}
