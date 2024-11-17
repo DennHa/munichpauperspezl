@@ -114,6 +114,7 @@ h3 {
     color: var(--color-primary);
     margin: var(--spacing-small);
 
+
 }
 
 /* Header Styles */
@@ -249,6 +250,7 @@ h3 {
     flex-wrap: wrap;
     justify-content: center;
     min-height: 40vh;
+    padding-top: var(--font-size-small);
     padding-bottom: var(--spacing-large);
 
     background-image: url(img/backRepeat.png);
