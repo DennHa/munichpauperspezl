@@ -136,7 +136,7 @@ h3 {
     display: flex;
     justify-content: space-around;
     align-items: flex-end;
-    flex-wrap: wrap-reverse;
+    flex-wrap: wrap;
 }
 
 .header-content {
@@ -432,51 +432,6 @@ h3 {
 
 
 
-/* Newsletter Styles */
-.newsletter {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--color-background);
-    padding: 24px 0px;
-}
-
-#mc_embed_signup {
-    background: var(--color-background);
-    clear: left;
-    font: 14px Helvetica, Arial, sans-serif;
-    width: 100%;
-    max-width: 600px;
-    margin: auto;
-    padding: 20px;
-}
-
-#mc-embedded-subscribe-form input[type=checkbox] {
-    display: inline;
-    width: auto;
-    margin-right: 10px;
-}
-
-#mergeRow-gdpr {
-    margin-top: 20px;
-}
-
-/* Footer Styles */
-.footer {
-    background-color: var(--color-primary);
-    color: var(--color-text);
-    text-align: center;
-    padding: 10px;
-}
-
-.impressum p {
-    color: var(--color-text);
-    text-decoration: none;
-    transition: color 0.3s ease;
-    cursor: pointer;
-}
-
 /* Media Queries */
 @media (max-width: 480px) {
     .brIphone {
@@ -515,6 +470,7 @@ h3 {
     .header-logo img {
         max-height: 40vh;
         min-width: 150px;
+        margin-bottom: 5vh;
     }
 
     .content-logo {
