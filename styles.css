@@ -192,7 +192,7 @@ h3 {
 .spezlDiscord{
     background-color: #FBB901;
     background-image: url('img/buttonSpezl.png');
-    background-size: cover;
+    background-size:100% 100%;
     color: var(--color-primary);
 
 }
