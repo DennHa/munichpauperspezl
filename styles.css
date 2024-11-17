@@ -432,7 +432,10 @@ h3 {
     margin-top: 20px;
 }
 
-
+.footer{
+    text-align: center;
+    
+}
 
 /* Media Queries */
 @media (max-width: 480px) {
