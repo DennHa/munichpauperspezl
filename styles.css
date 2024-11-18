@@ -150,7 +150,7 @@ h3 {
     justify-content: center;
     align-items: center;
     color: var(--color-primary);
-    min-width: 100vw;
+    min-width: 80vw;
     margin-top: var(--spacing-medium);
 }
 
