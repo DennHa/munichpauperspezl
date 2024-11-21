@@ -484,6 +484,11 @@ h3 {
         text-align: center;
     }
 
+    .partner-artist h2{
+        font-size: var(--font-size-small);
+        text-align: center;
+    }
+
     .header h2 {
         font-size: 2.2rem;
         text-align: center;
