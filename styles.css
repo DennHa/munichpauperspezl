@@ -9,19 +9,20 @@
     --color-link-active: #49277D;
     --color-outline: #11233D;
 
-    /* Font Sizes */
-    --font-size-small: 0.875em;  /* around 14px */
-    --font-size-medium: 1.2em;   /* around 19px */
-    --font-size-large: 1.5em;    /* around 24px */
-    --font-size-xlarge: 2rem;    /* 32px */
-    --font-size-xxlarge: 4rem;   /* 64px, consider if you need it this large */
-    /* Spacing */
-    --spacing-small: 2vh;
-    --spacing-medium: 4vw;
-    --spacing-large: 12vw;
+/* Font Sizes */
+--font-size-small: 0.65em;   /* around 14px */
+--font-size-medium: 0.93em;  /* around 19px */
+--font-size-large: 1.16em;   /* around 24px */
+--font-size-xlarge: 1.56em;  /* around 32px */
+--font-size-xxlarge: 2.6em;  /* around 52px */
 
-    /* Border Radius */
-    --border-radius: 25px;
+/* Spacing */
+--spacing-small: 2vh;
+--spacing-medium: 4vw;
+--spacing-large: 12vw;
+
+/* Border Radius */
+--border-radius: 25px;
 
 
 
@@ -102,7 +103,7 @@ a:active {
     margin: 0;
     font-size: var(--font-size-xxlarge);
     letter-spacing: 0.2rem;
-    line-height: 95%;
+    line-height: 110%;
 }
 /* Universal h3 Styles */
 h3 {
@@ -130,7 +131,7 @@ h3 {
     align-items: center;
     background-image: url('img/BackgroundSpezl.png');
     background-repeat: repeat-x;
-    background-size: 100vw;
+    background-size: 50vw;
 }
 
 .content-logo {
@@ -226,7 +227,7 @@ h3 {
 
 
 .partner-artist {
-    min-height: 16vh;
+    min-height: 17vh;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -252,7 +253,7 @@ h3 {
 }
 
 .partners img {
-    height: 120px;
+    height: 80px;
     margin-right: 25px;
 }
 
@@ -265,12 +266,12 @@ h3 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    min-height: 25vh;
+    min-height: 26vh;
     padding-top: var(--font-size-small);
-    padding-bottom: 15%;
+    padding-bottom: 25%;
     background-color:#FBB901;
     background-image: url(img/backRepeat.png);
-    background-size: 100% 30%;
+    background-size: 100% 40%;
     background-repeat:no-repeat;
     background-position: bottom;
     align-items: center;
@@ -307,6 +308,113 @@ h3 {
 
 }
 
+
+/* Prize Pool */
+.prizePool {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-height: 25vh;
+    padding-top: var(--font-size-small);
+    padding-bottom: 25%;
+    background-color:var(--color-background);
+    background-image: url(img/backRepeat2.png);
+    background-size: 100% 25%;
+    background-repeat:no-repeat;
+    background-position: bottom;
+    align-items: center;
+}
+.prizePool h3{
+    color: var(--color-primary);
+}
+#prizePool {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: var(--color-primary);
+}
+
+.prizes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.prize-item {
+    flex: 1 1 calc(30% - 20px);
+    box-sizing: border-box;
+    max-width: calc(30% - 20px);
+    text-align: center;
+    
+}
+
+.prize-item img {
+    width: 90%;
+    max-width: 700px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.prize-item p {
+    color: var(--color-primary);
+    margin-top: 10px;
+    font-size: var(--font-size-medium);
+}
+
+.more-to-announce {
+    font-size: 1.5em;
+    margin-top: 20px;
+}
+
+/*Rules section*/
+.rules {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-height: 25vh;
+    padding-top: var(--font-size-small);
+
+    background-color:#11233D;
+
+    background-repeat:no-repeat;
+    background-position: bottom;
+    align-items:flex-start;
+    color: var(--color-text);
+}
+
+.rules h2{
+    width: 100%;
+    text-align:left;
+    color: var(--color-text);
+    
+}
+
+.rules h3{
+    color: var(--color-text);
+    
+}
+.rules ul{
+    color: var(--color-text);
+    line-height: 3vh;
+    justify-self: flex-start;
+    width: 100%;
+    margin-bottom: var(--spacing-medium);
+}
+.rules p{
+    color: var(--color-text);
+    line-height: 3vh;
+}
+
+.rules a {
+    color: #FBB901;
+}
+
+
+
+
+
+
+/*info*/
 .info {
     background-color: var(--color-background);
     background-repeat: no-repeat;
@@ -394,58 +502,7 @@ h3 {
     box-sizing: border-box;
 }
 
-/* Prize Pool */
-.prizePool {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    background-image: url(img/Background_white.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: var(--color-primary);
-    min-height: 40vh;
-    padding: 20px;
-    box-sizing: border-box;
-    color: #fff;
-}
 
-#prizePool {
-    font-size: 2em;
-    margin-bottom: 20px;
-}
-
-.prizes {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 20px;
-}
-
-.prize-item {
-    flex: 1 1 calc(30% - 20px);
-    box-sizing: border-box;
-    max-width: calc(30% - 20px);
-    text-align: center;
-}
-
-.prize-item img {
-    width: 100%;
-    max-width: 700px;
-    height: auto;
-    border-radius: 8px;
-}
-
-.prize-item p {
-    color: #fff;
-    margin-top: 10px;
-    font-size: var(--font-size-medium);
-}
-
-.more-to-announce {
-    font-size: 1.5em;
-    margin-top: 20px;
-}
 
 .footer{
     text-align: center;
