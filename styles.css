@@ -123,7 +123,7 @@ h3 {
     background-color: var(--color-background);
     text-align: center;
     padding: var(--spacing-small) var(--spacing-medium);
-    min-height: 75vh;
+    min-height: 72vh;
     display: flex;
     flex-wrap:wrap;
     flex-direction: column;
@@ -204,7 +204,6 @@ h3 {
 
 
 .header-logo {
-    margin-right: var(--spacing-medium);
     text-align: right;
     align-items: center;
     display: flex;
@@ -350,7 +349,7 @@ h3 {
 
 .prize-item img {
     width: 90%;
-    max-width: 700px;
+    max-width: 250px;
     height: auto;
     border-radius: 8px;
 }
@@ -455,7 +454,7 @@ h3 {
 
 }
 .info-section-pe {
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: center;
     padding: var(--spacing-small) 0;
@@ -537,25 +536,24 @@ h3 {
     }
 
     .header h1 {
-        font-size: var(--font-size-small);
+        font-size: var(--font-size-medium);
         text-align: center;
     }
 
     .partner-artist h2{
-        font-size: var(--font-size-small);
+        font-size: var(--font-size-medium);
         text-align: center;
     }
 
     .header h2 {
-        font-size: 2.2rem;
+
         text-align: center;
     }
-    h3{
-        font-size: var(--font-size-xlarge);
-    }
+
 
     .header{
         font-size: var(--font-size-small);
+        background-size: 100vw;
     }
 
     .header-logo img {
@@ -571,22 +569,22 @@ h3 {
     .text-section{
         flex-direction: column;
         padding-bottom:  var(--spacing-large);
-        max-width: 100vw;
+        max-width: 100%;
     }
 
     .text-section p {
         padding: 0 var(--spacing-large) ;
-        font-size: var(--font-size-small);
+        font-size: var(--font-size-medium);
         text-align: left;
         line-height: 1.5rem;
     }
 
-    .partners {
-        width: 100%;
-        text-align: center;
+    .main-content{
+        background-size: 100vw 15%;
     }
-
-   
+   .main-content h3{
+    font-size: var(--font-size-xlarge);
+   }
 
     .cta-container {
         width: 100%;
@@ -616,6 +614,9 @@ h3 {
     }
 
     .partners {
+        width: 100%;
+        text-align: center;
+        padding-bottom: 10%;
         align-items: center;
         margin-right: 0;
     }
@@ -627,7 +628,7 @@ h3 {
     }
 
     .info-section {
-        font-size: var(--font-size-small);
+        font-size: var(--font-size-medium);
         
     }
 
@@ -638,7 +639,7 @@ h3 {
     .image-section img {
         width: 100%;
         height: auto;
-        max-width: 100vw;
+        max-width: 100%;
     }
     .info-section-pe p{
 
@@ -666,23 +667,50 @@ h3 {
 
     }
 
+
+
+    .prizePool{
+        background-size: 100vw 5%;
+    }
+
     .prizes {
         flex-direction: column;
         align-items: center;
+
+        background-size: 10% 5%;
+    }
+
+    .prizePool h3{
+        font-size: var(--font-size-xlarge);
     }
 
     .prize-item {
         flex: 1 1 100%;
-        max-width: 100%;
+        max-width: 90%;
         max-height: 100%;
     }
     .prize-item p{
         text-align: left;
-        font-size: var(--font-size-small);
+        font-size: var(--font-size-medium);
     }
 
     .more-to-announce{
         font-size: var(--font-size-medium);
+    }
+
+    .rules{
+        width: 100%; /* Breite auf 100% minus etwas Padding setzen */
+    }
+
+    .rules h2{
+        text-align: center;
+    }
+    .rules ul {
+        max-width: 80%;
+    }
+    .rules li {
+        padding-bottom: 1vh;
+        line-height: 1.4rem;
     }
 
     .newsletter {
@@ -720,7 +748,7 @@ h3 {
     .carouselle img {
         width: 100%;
         max-height: auto;
-        max-width: 100vw;
+        max-width: 100%;
         min-width: 250px;
         padding: 0.25vw;
     }
