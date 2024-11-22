@@ -315,7 +315,7 @@ h3 {
     justify-content: center;
     min-height: 25vh;
     padding-top: var(--font-size-small);
-    padding-bottom: 25%;
+    padding-bottom: 15%;
     background-color:var(--color-background);
     background-image: url(img/backRepeat2.png);
     background-size: 100% 25%;
@@ -363,6 +363,9 @@ h3 {
 .more-to-announce {
     font-size: 1.5em;
     margin-top: 20px;
+    min-width: 100%;
+    text-align: center;
+    padding-top: var(--spacing-medium);
 }
 
 /*Rules section*/
