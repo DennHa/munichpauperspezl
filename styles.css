@@ -564,6 +564,7 @@ h3 {
     .header{
         font-size: var(--font-size-small);
         background-size: 100vw;
+        margin-bottom: var(--spacing-large);
     }
 
     .header-logo img {
@@ -589,9 +590,6 @@ h3 {
         line-height: 1.5rem;
     }
 
-    .main-content{
-        background-size: 100vw 15%;
-    }
    .main-content h3{
     font-size: var(--font-size-xlarge);
    }
@@ -626,15 +624,16 @@ h3 {
     .partners {
         width: 100%;
         text-align: center;
-        padding-bottom: 10%;
         align-items: center;
         margin-right: 0;
     }
+
 
     .partners img {
         width: 50vw;
         height: auto;
         margin-right: 0;
+        margin-bottom: 5vh;
     }
 
     .info-section {
@@ -687,7 +686,6 @@ h3 {
         flex-direction: column;
         align-items: center;
 
-        background-size: 10% 5%;
     }
 
     .prizePool h3{
