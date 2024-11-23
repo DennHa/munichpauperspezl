@@ -233,11 +233,6 @@ h3 {
     align-items:center;
     color: var(--color-text);
     background-color: var(--color-background);
-    background-image: url(img/backRepeatPartner.png);
-    background-repeat:no-repeat;
-    background-position-y: bottom;
-    background-size: 100% 15%;
-    padding-bottom: 5%;
 }
 
 .partner-artist h2{
@@ -260,6 +255,13 @@ h3 {
     background: none;
 }
 
+.seperator1{
+    background-image: url(img/backRepeatPartner.png);
+    background-repeat:no-repeat;
+    background-position: bottom;
+    background-size: 100% 100%;
+    min-height: 5vh;
+}
 /* Main Content Styles */
 .main-content {
     display: flex;
@@ -267,13 +269,17 @@ h3 {
     justify-content: center;
     min-height: 26vh;
     padding-top: var(--font-size-small);
-    padding-bottom: 25%;
     background-color:#FBB901;
+
+    align-items: center;
+}
+
+.seperator2{
     background-image: url(img/backRepeat.png);
-    background-size: 100% 40%;
     background-repeat:no-repeat;
     background-position: bottom;
-    align-items: center;
+    background-size: 100% 100%;
+    min-height: 10vh;
 }
 
 .discordIMG {
@@ -315,12 +321,6 @@ h3 {
     justify-content: center;
     min-height: 25vh;
     padding-top: var(--font-size-small);
-    padding-bottom: 15%;
-    background-color:var(--color-background);
-    background-image: url(img/backRepeat2.png);
-    background-size: 100% 25%;
-    background-repeat:no-repeat;
-    background-position: bottom;
     align-items: center;
 }
 .prizePool h3{
@@ -368,6 +368,13 @@ h3 {
     padding-top: var(--spacing-medium);
 }
 
+.seperator3{
+    background-image: url(img/backRepeat2.png);
+    background-repeat:no-repeat;
+    background-position: bottom;
+    background-size: 100% 100%;
+    min-height: 10vh;
+}
 /*Rules section*/
 .rules {
     display: flex;
