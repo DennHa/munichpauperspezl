@@ -361,6 +361,18 @@ h3 {
     font-size: var(--font-size-medium);
 }
 
+.cardPrizes{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card img{
+    max-width: 450px;
+    width: 100%;
+}
+
 .more-to-announce {
     font-size: 1.5em;
     margin-top: 20px;
