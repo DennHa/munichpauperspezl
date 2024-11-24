@@ -83,6 +83,7 @@ a:link, a:visited {
 a:focus, a:hover {
     text-decoration: none;
     background: var(--color-accent);
+
 }
 
 a:active {
@@ -267,7 +268,7 @@ h3 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    min-height: 26vh;
+    min-height: 35vh;
     padding-top: var(--font-size-small);
     background-color:#FBB901;
 
