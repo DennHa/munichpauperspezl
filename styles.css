@@ -525,6 +525,47 @@ h3 {
 }
 
 
+/* Spezl */
+
+.spezl {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch; /* Aligns child items to stretch vertically */
+    gap: 16px; /* Adds spacing between elements */
+}
+.spezl h3{
+    min-width: auto;
+    align-self: center;
+}
+
+.spezl-text {
+    flex: 2;
+    max-width: 66.66%; /* Maintains the 2/3 width */
+    align-self: center;
+    margin-left: var(--spacing-small);
+    margin-right: var(--spacing-small);
+}
+
+.spezl-text p{
+    max-width: 70%;
+}
+
+
+.spezl-img {
+    flex: 1;
+    max-width: 33.33%; /* Maintains the 1/3 width */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.spezl-img img {
+    max-width: 100%; /* Ensures the image doesn't overflow horizontally */
+    height: auto; /* Maintains aspect ratio */
+}
+
+
 
 .footer{
     text-align: center;
@@ -772,6 +813,20 @@ h3 {
         max-width: 100%;
         min-width: 250px;
         padding: 0.25vw;
+    }
+
+    .spezl {
+        flex-direction: column; /* Stacks image above text */
+        align-items: center; /* Centers content for smaller screens */
+    }
+
+    .spezl-img, .spezl-text {
+        max-width: 100%; /* Both elements take full width */
+    }
+
+    .spezl-img img {
+        width: 100%; /* Ensures the image spans full width */
+        max-height: auto; /* Allows height to adjust naturally */
     }
 }
 
