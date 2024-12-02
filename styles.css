@@ -345,7 +345,7 @@ h3 {
 .hSeperator{
     min-width: 100%;
     flex: 1 1 100%;
-    padding-top: var(--spacing-large);
+    padding-top: var(--spacing-medium);
     text-align: center;
 }
 
