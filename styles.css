@@ -341,6 +341,14 @@ h3 {
     color: var(--color-primary);
 }
 
+
+.hSeperator{
+    min-width: 100%;
+    flex: 1 1 100%;
+    padding-top: var(--spacing-large);
+    text-align: center;
+}
+
 .prizes {
     display: flex;
     flex-wrap: wrap;
@@ -367,6 +375,7 @@ h3 {
     color: var(--color-primary);
     margin-top: 10px;
     font-size: var(--font-size-medium);
+    text-align: center;
 }
 
 .cardPrizes{
@@ -744,16 +753,16 @@ h3 {
     .prizePool{
         background-size: 100vw 5%;
     }
-
+    .prizePool h3{
+        font-size: var(--font-size-xlarge);
+    }
     .prizes {
         flex-direction: column;
         align-items: center;
 
     }
 
-    .prizePool h3{
-        font-size: var(--font-size-xlarge);
-    }
+   
 
     .prize-item {
         flex: 1 1 100%;
@@ -761,7 +770,7 @@ h3 {
         max-height: 100%;
     }
     .prize-item p{
-        text-align: left;
+        text-align: center;
         font-size: var(--font-size-medium);
     }
 
@@ -784,45 +793,6 @@ h3 {
         line-height: 1.4rem;
     }
 
-    .newsletter {
-        padding: 10px; /* Padding für besseren Abstand */
-        box-sizing: border-box; /* Box-Sizing für korrektes Padding */
-        width: 100%; /* Breite auf 100% setzen */
-        max-width: 100%; /* Max-Breite auf 100% setzen */
-    }
-
-    #mc_embed_signup {
-        padding: 10px; /* Padding für besseren Abstand */
-        width: 100%; /* Breite auf 100% setzen */
-        box-sizing: border-box; /* Box-Sizing für korrektes Padding */
-    }
-
-    .newsletter h2 {
-        font-size: 1.4em; /* Angepasste Schriftgröße */
-        margin-bottom: 10px;
-    }
-
-    .newsletter input[type=email],
-    .newsletter input[type=text] {
-        padding: 10px; /* Erhöhtes Padding für bessere Benutzerfreundlichkeit */
-        margin-bottom: 10px; /* Abstand unten */
-        width: 100%; /* Breite auf 100% setzen */
-        box-sizing: border-box; /* Box-Sizing für korrektes Padding */
-    }
-
-    .newsletter input[type=submit] {
-        padding: 10px; /* Erhöhtes Padding für bessere Benutzerfreundlichkeit */
-        width: 100%; /* Breite auf 100% setzen */
-        box-sizing: border-box; /* Box-Sizing für korrektes Padding */
-    }
-
-    .carouselle img {
-        width: 100%;
-        max-height: auto;
-        max-width: 100%;
-        min-width: 250px;
-        padding: 0.25vw;
-    }
 
     .spezl {
         flex-direction: column; /* Stacks image above text */
