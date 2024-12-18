@@ -106,6 +106,11 @@ a:active {
     letter-spacing: 0.2rem;
     line-height: 110%;
 }
+
+.soldOut{
+    color: #fb0154;
+}
+
 /* Universal h3 Styles */
 h3 {
     font-family: 'Alegreya', cursive;
@@ -219,7 +224,7 @@ h3 {
     min-width: 250px;
 }
 .soldOut{
-    color: var(--color-link-active);
+    color: #fb0154;
     font-size: var(--font-size-xlarge);
     font-weight: bold;
     text-transform: uppercase;
