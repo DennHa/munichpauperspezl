@@ -223,14 +223,21 @@ h3 {
     background-color: #FBB901;
     color: var(--color-primary);
 }
-.spezlDiscord{
+.spezlDiscord {
+    display: inline-block; /* Prevent full width stretching */
+    max-width: 100%; /* Prevent it from exceeding container */
+    padding: 15px 30px; /* Adjust padding */
+    text-align: center;
+    border-radius: var(--border-radius);
     background-color: #FBB901;
     background-image: url('img/buttonSpezl.png');
-    background-size:100% 100%;
+    background-size: cover;
+    background-position: center;
     color: var(--color-primary);
-    text-align: center;
-    display: block; /* or inline-block if needed */
-
+    font-size: var(--font-size-large);
+    font-weight: bold;
+    text-decoration: none; /* Removes underline */
+    white-space: nowrap; /* Prevents text wrapping */
 }
 
 
