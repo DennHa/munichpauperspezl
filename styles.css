@@ -180,9 +180,14 @@ h3 {
 }
 
 .cta-container {
-    text-align: left;
-    min-width: 200px;
-    padding-right: var(--spacing-medium);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    padding-right: 0;
+    min-width: auto;
 }
 
 .cta-button {
@@ -205,6 +210,8 @@ h3 {
     background-image: url('img/buttonSpezl.png');
     background-size:100% 100%;
     color: var(--color-primary);
+    text-align: center;
+    display: block; /* or inline-block if needed */
 
 }
 
@@ -553,7 +560,7 @@ h3 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: stretch; /* Aligns child items to stretch vertically */
+    align-items: center;     /* Center children vertically */
     gap: 16px; /* Adds spacing between elements */
 }
 .spezl h3{
@@ -674,6 +681,7 @@ h3 {
         width: 100%;
         text-align: center;
         padding-bottom: var(--spacing-small);
+
     }
 
     .cta-button, .register {
