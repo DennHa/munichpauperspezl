@@ -190,6 +190,24 @@ h3 {
     min-width: auto;
 }
 
+.cta-container .button-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Adjust spacing between buttons as needed */
+    margin-top: 10px;
+}
+
+.cta-button.instagram {
+    background-color: #E1306C; /* Instagram's signature color */
+    color: #fff;
+    border: none;
+    padding: 20px 40px;
+    font-size: var(--font-size-large);
+    cursor: pointer;
+    border-radius: var(--border-radius);
+    letter-spacing: 0.2rem;
+}
+
 .cta-button {
     background-color: var(--color-primary);
     color: var(--color-text);
