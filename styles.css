@@ -577,8 +577,52 @@ h3 {
     padding: 0.25vw;
     box-sizing: border-box;
 }
+/*Rules section*/
+.tournament-recap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-height: 25vh;
+    padding-top: var(--font-size-small);
 
+    background-color:#11233D;
 
+    background-repeat:no-repeat;
+    background-position: bottom;
+    align-items:flex-start;
+    color: var(--color-text);
+}
+
+.tournament-recap h2{
+    width: 100%;
+    text-align:left;
+    color: var(--color-text);
+    
+}
+
+.tournament-recap h3{
+    color: var(--color-text);
+    
+}
+.tournament-recap ul{
+    color: var(--color-text);
+    line-height: 3vh;
+    justify-self: flex-start;
+    width: 100%;
+    margin-bottom: var(--spacing-medium);
+}
+.tournament-recap p{
+    color: var(--color-text);
+    line-height: 3vh;
+}
+
+.tournament-recap a {
+    color: #FBB901;
+}
+
+.blast-section img{
+    
+}
 /* Spezl */
 
 .spezl {
@@ -618,6 +662,8 @@ h3 {
     max-width: 100%; /* Ensures the image doesn't overflow horizontally */
     height: auto; /* Maintains aspect ratio */
 }
+
+/* SECTION: Recap + Upcoming Event */
 
 
 
