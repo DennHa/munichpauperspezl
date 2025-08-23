@@ -687,7 +687,7 @@ h3 {
 }
 
 .spezl-text p {
-    max-width: 70%;
+
 }
 
 
@@ -777,15 +777,20 @@ h3 {
 
     .text-section {
         flex-direction: column;
+ 
         padding-bottom: var(--spacing-large);
-        max-width: 100%;
+        width: 100vw;
     }
 
     .text-section p {
-        padding: 0 var(--spacing-large);
+        
         font-size: var(--font-size-medium);
-        text-align: left;
+        text-align: center;
         line-height: 1.5rem;
+    }
+
+    #spezl-info{
+        padding: 0;
     }
 
     .main-content h3 {
@@ -957,6 +962,7 @@ h3 {
     .spezl-img,
     .spezl-text {
         max-width: 100%;
+        align-items: center;
         /* Both elements take full width */
     }
 
