@@ -4401,6 +4401,7 @@ input, select, textarea {
 
 	.sponsor-item img {
 		max-height: 8vh;
+		max-width: 120px;
 		width: auto;
 		object-fit: contain;
 	}
@@ -4410,6 +4411,11 @@ input, select, textarea {
 		.sponsors-container {
 			flex-direction: column;
 			gap: 1.5em;
+		}
+
+		.sponsor-item img {
+			max-height: 5vh;
+			max-width: 80px;
 		}
 
 	}
