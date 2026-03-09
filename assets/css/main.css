@@ -28,7 +28,7 @@
 	--color-mana-sun:      #FFDF5E;
 	
 	/* Typography */
-	--font-display:        'Alegreya', serif;
+	--font-display:        'Pirata One', cursive;
 	--font-body:           'Lora', serif;
 	
 	/* Type Scale */
@@ -273,6 +273,9 @@ input, select, textarea {
 		}
 
 /* Type */
+
+
+
 
 	body, input, select, textarea {
 		color: var(--color-dark);
@@ -4356,3 +4359,57 @@ input, select, textarea {
 			opacity: 1;
 			visibility: visible;
 		}
+
+/* Sponsors */
+
+	.sponsors-section {
+		padding: 2em 1.5em;
+		text-align: center;
+		position: relative;
+		z-index: 2;
+	}
+
+	.sponsors-section > .major h3 {
+		color: var(--color-light);
+	}
+
+	.sponsors-section > .major {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.sponsors-container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		gap: 2em;
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+	.sponsor-item a {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-bottom: none;
+	}
+
+	.sponsor-item a:hover {
+		opacity: 0.7;
+	}
+
+	.sponsor-item img {
+		max-height: 8vh;
+		width: auto;
+		object-fit: contain;
+	}
+
+	@media screen and (max-width: 480px) {
+
+		.sponsors-container {
+			flex-direction: column;
+			gap: 1.5em;
+		}
+
+	}
