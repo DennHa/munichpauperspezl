@@ -4409,8 +4409,10 @@ input, select, textarea {
 	@media screen and (max-width: 480px) {
 
 		.sponsors-container {
-			flex-direction: column;
+			display: grid;
+			grid-template-columns: 1fr 1fr;
 			gap: 1.5em;
+			justify-items: center;
 		}
 
 		.sponsor-item img {
