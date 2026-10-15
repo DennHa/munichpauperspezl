@@ -39,6 +39,12 @@
 	--text-nav:            33px;
 	--text-body:           18px;
 	--text-label:          26px;
+
+	/* Header variables (responsive, editable) */
+	--header-bg:           #0B2540; /* default header background (dark blue) */
+	--header-padding-vertical: 1em;
+	--header-padding-horizontal: 1.5em;
+	--header-min-height:   0;
 }
 
 html, body, div, span, applet, object,
@@ -50,7 +56,7 @@ u, i, center, dl, dt, dd, ol, ul, li, fieldset,
 form, label, legend, table, caption, tbody,
 tfoot, thead, tr, th, td, article, aside,
 canvas, details, embed, figure, figcaption,
-footer, header, hgroup, menu, nav, output, ruby,
+footer, hgroup, menu, nav, output, ruby,
 section, summary, time, mark, audio, video {
 	margin: 0;
 	padding: 0;
@@ -210,7 +216,7 @@ input, select, textarea {
 			padding-left: 0.5em;
 			padding-right: 0.5em;
 		}
-		h1, h2, h3 {
+		h2, h3 {
 			font-size: 1.2em !important;
 			letter-spacing: 0.05em;
 		}
@@ -304,23 +310,22 @@ input, select, textarea {
 		line-height: 1.4;
 	}
 
-		@media screen and (max-width: 99999px) {
-		
-			.banner-logo {
-				width: 20vw !important;
-				max-width: 20vw !important;
-				min-width: 0 !important;
-				height: auto !important;
-				margin: 0.1em auto 0.2em auto !important;
-				display: block !important;
-			}
-			.banner-content {
-				display: flex !important;
-				
-				align-items: center !important;
-				justify-content: center !important;
-				min-height: 60vw !important;
-			}
+		.banner-logo {
+			width: 20vw !important;
+			max-width: 20vw !important;
+			min-width: 0 !important;
+			height: auto !important;
+			margin: 0.1em auto 0.2em auto !important;
+			display: block !important;
+		}
+
+		.banner-content {
+			display: flex !important;
+			align-items: center !important;
+			justify-content: center !important;
+			min-height: 60vw !important;
+		}
+
 		@media screen and (max-width: 1280px) {
 
 			body, input, select, textarea {
@@ -344,14 +349,6 @@ input, select, textarea {
 	a {
 		-moz-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
 		-webkit-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
-		.banner-logo {
-			width: 70vw !important;
-			max-width: 70vw !important;
-			min-width: 0 !important;
-			height: auto !important;
-			margin: 0.1em auto 0.2em auto !important;
-			display: block !important;
-		}
 		-ms-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
 		transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
 		border-bottom: dotted 1px;
@@ -2393,6 +2390,18 @@ input, select, textarea {
 			top: 0.25em;
 		}
 
+		@media screen and (max-width: 736px) {
+
+			.image.left,
+			.image.right {
+				float: none;
+				margin: 0 0 1.25em 0;
+				max-width: 100%;
+				width: 100%;
+			}
+
+		}
+
 		.image.fit {
 			display: block;
 			margin: 0 0 2em 0;
@@ -3326,15 +3335,15 @@ input, select, textarea {
 		display: -ms-flex;
 		display: flex;
 		align-items: center;
-		background-color: #2a2f4a;
+		background-color: var(--header-bg);
 		box-shadow: 0 0 0.25em 0 rgba(0, 0, 0, 0.15);
 		cursor: default;
 		font-weight: 600;
-	
-		height: auto;
+		/* Use padding to let background scale with content / size */
+		padding: var(--header-padding-vertical) var(--header-padding-horizontal);
+		min-height: var(--header-min-height);
 		left: 0;
 		letter-spacing: 0.25em;
-		line-height: 3.25em;
 		margin: 0;
 		position: fixed;
 		text-transform: uppercase;
@@ -3437,6 +3446,9 @@ input, select, textarea {
 
 				#header nav a[href="#menu"] {
 					padding-right: 3.325em !important;
+					text-indent: -9999px;
+					white-space: nowrap;
+					overflow: hidden;
 				}
 
 					#header nav a[href="#menu"]:before, #header nav a[href="#menu"]:after {
@@ -3496,7 +3508,7 @@ input, select, textarea {
 			-webkit-animation: none;
 			-ms-animation: none;
 			animation: none;
-			background-color: transparent;
+			background-color: var(--header-bg);
 			box-shadow: none;
 			position: absolute;
 		}
@@ -3524,6 +3536,11 @@ input, select, textarea {
 			#header.alt.style6 .logo strong {
 				color: #87c5a4;
 			}
+
+		/* Make links dark when header is transparent/over light backgrounds */
+		#header.alt nav a {
+			color: var(--color-dark) !important;
+		}
 
 		body.is-preload #header.alt {
 			opacity: 0;
@@ -3556,8 +3573,25 @@ input, select, textarea {
 		@media screen and (max-width: 736px) {
 
 			#header {
-				height: 2.75em;
-				line-height: 2.75em;
+				min-height: 2.75em;
+				padding: 0.35em var(--header-padding-horizontal);
+				justify-content: center !important;
+			}
+
+			#header .logo {
+				flex: 1 !important;
+				justify-content: center !important;
+				width: auto !important;
+				margin: 0 !important;
+				padding: 0 1em;
+			}
+
+			#header nav {
+				position: absolute !important;
+				top: 50% !important;
+				right: 1.5em !important;
+				transform: translateY(-50%) !important;
+				margin-left: 0 !important;
 			}
 
 				#header .logo {
@@ -3573,11 +3607,12 @@ input, select, textarea {
 					}
 
 					#header nav a[href="#menu"] {
-						padding-right: 3.25em !important;
+						
 					}
 
 						#header nav a[href="#menu"]:before, #header nav a[href="#menu"]:after {
 							right: 0.75em;
+							width: 3.25em;
 						}
 
 						#header nav a[href="#menu"]:last-child {
@@ -3586,31 +3621,67 @@ input, select, textarea {
 
 							#header nav a[href="#menu"]:last-child:before, #header nav a[href="#menu"]:last-child:after {
 								right: 1.5em;
+								width: 3.25em;
 							}
 
 		}
 
 		@media screen and (max-width: 480px) {
 
+			#header,
+			#header.alt {
+				height: auto !important;
+				min-height: 70px !important;
+				line-height: 1.2 !important;
+				padding: 15px 0 !important;
+				box-sizing: border-box !important;
+				background-color: var(--header-bg) !important;
+				box-shadow: 0 0 0.25em 0 rgba(0, 0, 0, 0.15) !important;
+				position: fixed !important;
+				justify-content: center !important;
+			}
+
+			#header .logo {
+				display: flex !important;
+				justify-content: center !important;
+				align-items: center !important;
+				flex: 1 !important;
+				width: auto !important;
+				margin: 0 !important;
+				padding: 0.2em 0 !important;
+			}
+
 			#header .logo span {
 				display: none;
 			}
 
+			#header .logo img {
+				height: 38px !important;
+				width: auto !important;
+				max-width: 60vw !important;
+				display: block !important;
+				margin: 0 auto !important;
+			}
+
+			#header nav {
+				position: absolute !important;
+				top: 50% !important;
+				right: 1.5em !important;
+				transform: translateY(-50%) !important;
+				margin-left: 0 !important;
+			}
+
 			#header nav a[href="#menu"] {
-				overflow: hidden;
-				padding-right: 0 !important;
-				text-indent: 5em;
-				white-space: nowrap;
-				width: 5em;
+		
 			}
 
 				#header nav a[href="#menu"]:before, #header nav a[href="#menu"]:after {
 					right: 0;
-					width: inherit;
+					width: 3.25em;
 				}
 
 				#header nav a[href="#menu"]:last-child:before, #header nav a[href="#menu"]:last-child:after {
-					width: 4em;
+					width: 3.25em;
 					right: 0;
 				}
 
@@ -3620,6 +3691,7 @@ input, select, textarea {
 			display: flex !important;
 			align-items: center !important;
 			justify-content: space-between !important;
+			padding: var(--header-padding-vertical) var(--header-padding-horizontal);
 		}
 
 		#header > nav {
@@ -3656,11 +3728,11 @@ input, select, textarea {
 		border-bottom: 0 !important;
 		cursor: default;
 		height: 90vh;
-		margin-bottom: -3.25em;
+			margin-bottom: calc(-1 * var(--header-real-height, 3.25em));
 		max-height: 32em;
 		min-height: 22em;
 		position: relative;
-		top: -3.25em;
+			top: calc(-1 * var(--header-real-height, 3.25em));
 		color: #ffffff;
 	}
 
@@ -3760,6 +3832,15 @@ input, select, textarea {
 			font-size: 1.5em;
 			margin-bottom: 1.5em;
 			line-height: 1.4;
+		}
+
+		.banner-text p.sold-out-note {
+			font-size: 1.1em;
+			margin-top: -0.75em;
+		}
+
+		.banner-text p.sold-out-note strong {
+			color: var(--color-yellow);
 		}
 
 		.button.primary {
@@ -3930,14 +4011,14 @@ input, select, textarea {
 			#banner {
 				padding: 5em 0 1em 0 ;
 				height: auto;
-				margin-bottom: -2.75em;
+				margin-bottom: calc(-1 * var(--header-real-height, 2.75em));
 				max-height: none;
 				min-height: 0;
-				top: -2.75em;
+					top: calc(-1 * var(--header-real-height, 2.75em));
 			}
 
 				#banner h1 {
-					font-size: 2em;
+					font-size: 2.5em;
 				}
 
 				#banner > .inner .content {
@@ -4004,6 +4085,17 @@ input, select, textarea {
 				margin: 0 auto;
 				max-width: 65em;
 			}
+
+		@media screen and (max-width: 736px) {
+
+			#main > * > .inner {
+				max-width: none !important;
+				width: calc(100% - 3em) !important;
+				padding: 3em 0 1em 0;
+				box-sizing: border-box;
+			}
+
+		}
 
 	#two {
 		
@@ -4106,6 +4198,15 @@ input, select, textarea {
 			color: var(--color-purple-dark);
 		}
 
+		#contact p a {
+			color: var(--color-purple-dark);
+			border-bottom: solid 2px var(--color-yellow);
+		}
+
+		#contact p a:hover {
+			color: var(--color-dark) !important;
+		}
+
 
 
 
@@ -4185,6 +4286,35 @@ input, select, textarea {
 
 		}
 
+		@media screen and (max-width: 480px) {
+
+			#contact > .inner > :nth-child(2n - 1),
+			#contact > .inner > :nth-child(2n) {
+				width: 100%;
+				max-width: none;
+			}
+
+			.imageLeft {
+				display: none;
+			}
+
+			.mobile-image-hero {
+				display: block;
+				width: 100vw;
+				margin-left: calc(50% - 50vw);
+				height: auto;
+			}
+
+		}
+
+		@media screen and (min-width: 481px) {
+
+			.mobile-image-hero {
+				display: none;
+			}
+
+		}
+
 /* Footer */
 
 	#footer .copyright {
@@ -4227,7 +4357,7 @@ input, select, textarea {
 		-webkit-transition: -webkit-filter 0.35s ease, -webkit-filter 0.35s ease, opacity 0.375s ease-out;
 		-ms-transition: -ms-filter 0.35s ease, -webkit-filter 0.35s ease, opacity 0.375s ease-out;
 		transition: filter 0.35s ease, -webkit-filter 0.35s ease, opacity 0.375s ease-out;
-		padding-top: 3.25em;
+		padding-top: 86px;
 	}
 
 		#wrapper.is-transitioning {
@@ -4253,7 +4383,7 @@ input, select, textarea {
 		@media screen and (max-width: 736px) {
 
 			#wrapper {
-				padding-top: 2.75em;
+				padding-top: 86px;
 			}
 
 		}
@@ -4261,10 +4391,7 @@ input, select, textarea {
 /* Menu */
 
 	#menu {
-		-moz-transition: -moz-transform 0.35s ease, opacity 0.35s ease, visibility 0.35s;
-		-webkit-transition: -webkit-transform 0.35s ease, opacity 0.35s ease, visibility 0.35s;
-		-ms-transition: -ms-transform 0.35s ease, opacity 0.35s ease, visibility 0.35s;
-		transition: transform 0.35s ease, opacity 0.35s ease, visibility 0.35s;
+		
 		-moz-align-items: center;
 		-webkit-align-items: center;
 		-ms-align-items: center;

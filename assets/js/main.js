@@ -12,6 +12,19 @@
 		$header = $('#header'),
 		$banner = $('#banner');
 
+	// Set a runtime CSS variable with the header's real height so CSS can adapt (banner offsets, etc.)
+	function setHeaderVars() {
+		if (!$header || $header.length === 0) return;
+		var h = $header[0].getBoundingClientRect().height || $header.height();
+		document.documentElement.style.setProperty('--header-real-height', Math.round(h) + 'px');
+	}
+	// Run on load and resize (and after DOM ready)
+	$window.on('load resize', function() {
+		setHeaderVars();
+	});
+	// Also run once immediately
+	setHeaderVars();
+
 	// Breakpoints.
 		breakpoints({
 			xlarge:    ['1281px',   '1680px'   ],
