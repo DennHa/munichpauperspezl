@@ -1,6 +1,7 @@
 # Uploads the site to the Hetzner webhosting via FTPS on every push to main.
 # Uses lftp because Hetzner's FTP server requires TLS session reuse on the
 # data connection, which FTP-Deploy-Action doesn't support (error 425).
+# The FTP user lands directly in the website folder, so files go to ./
 # Nothing is deleted on the server; files are only added or overwritten.
 # Credentials live in the repo's GitHub Secrets:
 #   FTP_SERVER    e.g. www746.your-server.de
@@ -21,6 +22,7 @@ concurrency:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
 
@@ -40,7 +42,6 @@ jobs:
           set ssl:verify-certificate yes
           set net:max-retries 2
           set net:timeout 30
-          cd public_html
           mirror --reverse --verbose --parallel=4 --no-perms \
             --exclude-glob .git/ \
             --exclude-glob .github/ \
