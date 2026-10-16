@@ -1,0 +1,46 @@
+# Uploads the site to the Hetzner webhosting via FTPS on every push to main.
+# Only changed files are transferred (state is kept on the server in
+# .ftp-deploy-sync-state.json). Credentials live in the repo's GitHub Secrets:
+#   FTP_SERVER    e.g. www746.your-server.de
+#   FTP_USERNAME
+#   FTP_PASSWORD
+
+name: Deploy to Hetzner
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Upload via FTPS
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps
+          # Website folder as seen after FTP login. If the FTP user lands
+          # directly in the website folder, change this to ./
+          server-dir: ./public_html/
+          exclude: |
+            **/.git*
+            **/.git*/**
+            .github/**
+            .vscode/**
+            **/.DS_Store
+            _old/**
+            assets/sass/**
+            **/*.pdf
+            README.txt
+            LICENSE.txt
+            CNAME
